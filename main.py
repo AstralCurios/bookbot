@@ -11,10 +11,9 @@ def get_book_text(filepath):
 def main():
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1) # Exit with a non-zero status to indicate an error
+        sys.exit(1) # Non-zero status to indicate an error
 
-    book = sys.argv[1] # Get the book path from command line arguments
-    #book = input("Enter the path to the book file: ")
+    book = sys.argv[1] # Get the book path from command line arguments instead of input
     text = get_book_text(book)
     chars_dict = get_num_characters(text)
     sorted_list = sort_characters(chars_dict) 

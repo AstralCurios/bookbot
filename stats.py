@@ -19,14 +19,13 @@ def get_num_characters(text):
 def sort_characters(dictionary):
     dictionary_list = []
     
-    # Step 1: Loop through each character in the dictionary
+
     for char in dictionary:
-        # Step 2: Create a new dictionary for this character
+
         new_dict = {"char": char, "num": dictionary[char]}
-        # Step 3: Add it to the list
+
         dictionary_list.append(new_dict)
-    
-    # Step 4: Sort the list (you'll need a helper function here)
+
     dictionary_list.sort(reverse=True, key=sort_on)
     
     return dictionary_list
